@@ -4,7 +4,7 @@ Release:	1
 Summary:	Application-Level Forward Erasure Correction codes
 License:	CeCILL-C and GPLv2+ and BSD
 URL:		  https://github.com/roc-streaming/openfec
-Source0:	https://github.com/roc-streaming/openfec/archive/v%{version}/%{name}_%{version}.tar.gz
+Source0:	https://github.com/roc-streaming/openfec/archive/v%{version}/%{name}%{version}.tar.gz
 BuildRequires:	cmake
 BuildRequires:	coreutils
 BuildRequires:	findutils
