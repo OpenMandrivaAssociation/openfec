@@ -1,20 +1,11 @@
 Name:		openfec
 Version:	1.4.2.4
-Release:	3%{?dist}
+Release:	1
 Summary:	Application-Level Forward Erasure Correction codes
 License:	CeCILL-C and GPLv2+ and BSD
-# GPLv2+:
-#   tools/descr_stats_v1.2/descr_stats.c
-# BSD:
-#   src/lib_stable/reed-solomon_gf_2_8/of_reed-solomon_gf_2_8.c
-#   src/lib_stable/reed-solomon_gf_2_m/galois_field_codes_utils/algebra_2_4.c
-#   src/lib_stable/reed-solomon_gf_2_m/galois_field_codes_utils/algebra_2_4.h
-#   src/lib_stable/reed-solomon_gf_2_m/galois_field_codes_utils/algebra_2_8.c
-#   src/lib_stable/reed-solomon_gf_2_m/galois_field_codes_utils/algebra_2_8.h
-URL:		https://github.com/roc-streaming/openfec
-Source0:	%{URL}/archive/v%{version}/%{name}_%{version}.tar.gz
+URL:		  https://github.com/roc-streaming/openfec
+Source0:	https://github.com/roc-streaming/openfec/archive/v%{version}/%{name}_%{version}.tar.gz
 BuildRequires:	cmake
-BuildRequires:	gcc
 BuildRequires:	coreutils
 BuildRequires:	findutils
 # https://github.com/roc-streaming/openfec/pull/6
@@ -51,10 +42,10 @@ Utilities for openfec.
 
 %build
 %cmake
-%cmake_build
+%make_build
 
 %install
-%cmake_install
+%make_install -C build
 
 # Install headers
 mkdir -p %{buildroot}%{_includedir}/%{name}
@@ -62,9 +53,6 @@ pushd src
 find -name '*.h' -type f -exec install -pDm 0644 '{}' %{buildroot}%{_includedir}/%{name}/'{}' \;
 popd
 
-%check
-cd %{_vpath_builddir}
-make test
 
 %files
 %license LICENCE_CeCILL-C_V1-en.txt Licence_CeCILL_V2-en.txt
