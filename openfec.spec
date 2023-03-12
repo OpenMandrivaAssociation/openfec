@@ -1,5 +1,5 @@
 Name:		openfec
-Version:	1.4.2.4
+Version:	1.4.2.9
 Release:	1
 Summary:	Application-Level Forward Erasure Correction codes
 License:	CeCILL-C and GPLv2+ and BSD
@@ -10,9 +10,9 @@ BuildRequires:	coreutils
 BuildRequires:	findutils
 # https://github.com/roc-streaming/openfec/pull/6
 # https://github.com/OpenFEC/OpenFEC/pull/2
-Patch0:		openfec-1.4.2-distro-cmake.patch
+#Patch0:		openfec-1.4.2-distro-cmake.patch
 # https://github.com/roc-streaming/openfec/pull/2
-Patch1:		openfec-1.4.2.4-big-endian-fix.patch
+#Patch1:		openfec-1.4.2.4-big-endian-fix.patch
 
 %description
 Application-Level Forward Erasure Correction codes, or AL-FEC (also called
@@ -30,12 +30,12 @@ Requires: %{name}%{?_isa} = %{version}-%{release}
 The openfec-devel package contains header files necessary for
 developing programs using openfec.
 
-%package utils
-Summary: Utilities for openfec
-Requires: %{name}%{?_isa} = %{version}-%{release}
+#package utils
+#Summary: Utilities for openfec
+#Requires: %{name}%{?_isa} = %{version}-%{release}
 
-%description utils
-Utilities for openfec.
+#description utils
+#Utilities for openfec.
 
 %prep
 %autosetup -p1
@@ -62,9 +62,10 @@ popd
 %files devel
 %{_includedir}/%{name}
 %{_libdir}/libopenfec.so
+%{_datadir}/pkgconfig/openfec.pc
 
-%files utils
-%{_bindir}/descr_stats
-%{_bindir}/eperftool
-%{_bindir}/simple_client
-%{_bindir}/simple_server
+#files utils
+#{_bindir}/descr_stats
+#{_bindir}/eperftool
+#{_bindir}/simple_client
+#{_bindir}/simple_server
