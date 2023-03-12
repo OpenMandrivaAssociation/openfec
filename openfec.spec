@@ -30,12 +30,12 @@ Requires: %{name}%{?_isa} = %{version}-%{release}
 The openfec-devel package contains header files necessary for
 developing programs using openfec.
 
-%package utils
-Summary: Utilities for openfec
-Requires: %{name}%{?_isa} = %{version}-%{release}
+#package utils
+#Summary: Utilities for openfec
+#Requires: %{name}%{?_isa} = %{version}-%{release}
 
-%description utils
-Utilities for openfec.
+#description utils
+#Utilities for openfec.
 
 %prep
 %autosetup -p1
@@ -62,8 +62,9 @@ popd
 %files devel
 %{_includedir}/%{name}
 %{_libdir}/libopenfec.so
+%{_datadir}/pkgconfig/openfec.pc
 
-%files utils
+#files utils
 #{_bindir}/descr_stats
 #{_bindir}/eperftool
 #{_bindir}/simple_client
