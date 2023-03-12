@@ -64,7 +64,7 @@ popd
 %{_libdir}/libopenfec.so
 
 %files utils
-%{_bindir}/descr_stats
-%{_bindir}/eperftool
-%{_bindir}/simple_client
-%{_bindir}/simple_server
+#{_bindir}/descr_stats
+#{_bindir}/eperftool
+#{_bindir}/simple_client
+#{_bindir}/simple_server
