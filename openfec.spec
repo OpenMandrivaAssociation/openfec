@@ -10,7 +10,7 @@ BuildRequires:	coreutils
 BuildRequires:	findutils
 # https://github.com/roc-streaming/openfec/pull/6
 # https://github.com/OpenFEC/OpenFEC/pull/2
-Patch0:		openfec-1.4.2-distro-cmake.patch
+#Patch0:		openfec-1.4.2-distro-cmake.patch
 # https://github.com/roc-streaming/openfec/pull/2
 Patch1:		openfec-1.4.2.4-big-endian-fix.patch
 
