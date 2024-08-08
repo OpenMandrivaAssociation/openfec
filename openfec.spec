@@ -1,6 +1,6 @@
 Name:		openfec
-Version:	1.4.2.9
-Release:	2
+Version:	1.4.2.10
+Release:	1
 Summary:	Application-Level Forward Erasure Correction codes
 License:	CeCILL-C and GPLv2+ and BSD
 URL:		  https://github.com/roc-streaming/openfec
