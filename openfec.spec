@@ -1,5 +1,5 @@
 Name:		openfec
-Version:	1.4.2.10
+Version:	1.4.2.11
 Release:	1
 Summary:	Application-Level Forward Erasure Correction codes
 License:	CeCILL-C and GPLv2+ and BSD
