@@ -62,7 +62,7 @@ popd
 %files devel
 %{_includedir}/%{name}
 %{_libdir}/libopenfec.so
-#{_datadir}/pkgconfig/openfec.pc
+%{_libdir}/pkgconfig/openfec.pc
 
 #files utils
 #{_bindir}/descr_stats
